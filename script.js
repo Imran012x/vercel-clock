@@ -3,14 +3,14 @@ function createTicks() {
     for (let i = 0; i < 60; i++) {
         const tick = document.createElement('div');
         tick.classList.add('tick');
-        
+
         // Set the position of each tick
         const angle = (i * 6); // 360° / 60 ticks
-        const rotate = `rotate(${angle}deg) translate(0, -85px)`;
-        
+        const rotate = `rotate(${angle}deg) translateY(-90px)`; // Position ticks outward
+
         tick.style.transform = rotate;
-        
-        // Color the ticks
+
+        // Color the ticks using HSL
         tick.style.background = `hsl(${(i * 6)}, 100%, 50%)`; // Color wheel effect
         
         ticksContainer.appendChild(tick);
