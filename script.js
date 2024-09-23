@@ -6,7 +6,7 @@ function createTicks() {
 
         // Set the position of each tick
         const angle = (i * 6); // 360° / 60 ticks
-        const rotate = `rotate(${angle}deg) translateY(-85px)`; // Adjust translateY for proper positioning
+        const rotate = `rotate(${angle}deg) translateY(-90px)`; // Position ticks outward from center
 
         tick.style.transform = rotate;
 
