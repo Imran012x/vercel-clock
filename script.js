@@ -40,6 +40,11 @@ function updateClock() {
     secondHand.style.transform = `translateX(-50%) rotate(${secondDegrees}deg)`;
     millisecondHand.style.transform = `translateX(-50%) rotate(${millisecondDegrees}deg)`;
 
+    // Set the active tick
+    const ticks = document.querySelectorAll('.tick');
+    ticks.forEach(tick => tick.classList.remove('active')); // Remove active class from all ticks
+    ticks[minutes].classList.add('active'); // Add active class to the current minute tick
+
     digitalClock.textContent = now.toLocaleTimeString();
 }
 
