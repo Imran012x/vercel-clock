@@ -1,10 +1,12 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
     background-color: #282c34;
+    color: white;
 }
 
 .clock {
@@ -14,6 +16,7 @@ body {
     border-radius: 50%;
     position: relative;
     background: black;
+    margin-top: 20px;
 }
 
 .hand {
@@ -42,4 +45,3 @@ body {
     height: 90px;
     background: red;
 }
-
