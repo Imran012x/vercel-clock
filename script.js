@@ -20,4 +20,3 @@ function rotateClockHands() {
 // Update clock hands every second
 setInterval(rotateClockHands, 1000);
 rotateClockHands(); // Initial call
-
