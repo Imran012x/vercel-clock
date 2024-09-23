@@ -7,29 +7,50 @@ body {
     margin: 0;
     background-color: #282c34;
     color: white;
+    font-family: Arial, sans-serif;
 }
 
-#name {
-    font-size: 5rem;
-    animation: rotate 5s linear infinite;
+h1 {
+    margin-bottom: 20px;
 }
 
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-        color: #ffcc00;
-    }
-    25% {
-        color: #ff6699;
-    }
-    50% {
-        color: #66ccff;
-    }
-    75% {
-        color: #66ff66;
-    }
-    100% {
-        transform: rotate(360deg);
-        color: #ffcc00;
-    }
+#digital-clock {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.clock {
+    width: 200px;
+    height: 200px;
+    border: 10px solid white;
+    border-radius: 50%;
+    position: relative;
+    background: black;
+}
+
+.hand {
+    position: absolute;
+    background: white;
+    border-radius: 10px;
+    transform-origin: bottom;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hour-hand {
+    width: 6px;
+    height: 50px;
+    background: #ffcc00;
+}
+
+.minute-hand {
+    width: 4px;
+    height: 70px;
+}
+
+.second-hand {
+    width: 2px;
+    height: 90px;
+    background: red;
 }
