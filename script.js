@@ -1,3 +1,22 @@
+function createTicks() {
+    const ticksContainer = document.querySelector('.ticks');
+    for (let i = 0; i < 60; i++) {
+        const tick = document.createElement('div');
+        tick.classList.add('tick');
+        
+        // Set the position of each tick
+        const angle = (i * 6); // 360° / 60 ticks
+        const rotate = `rotate(${angle}deg) translate(0, -85px)`;
+        
+        tick.style.transform = rotate;
+        
+        // Color the ticks
+        tick.style.background = `hsl(${(i * 6)}, 100%, 50%)`; // Color wheel effect
+        
+        ticksContainer.appendChild(tick);
+    }
+}
+
 function updateClock() {
     const now = new Date();
     const milliseconds = now.getMilliseconds();
@@ -25,4 +44,5 @@ function updateClock() {
 }
 
 setInterval(updateClock, 10);
+createTicks();
 updateClock();
