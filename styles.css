@@ -26,6 +26,9 @@ h1 {
     border-radius: 50%;
     position: relative;
     background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hand {
