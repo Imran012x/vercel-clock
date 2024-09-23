@@ -81,7 +81,7 @@ h1 {
     background: #fff;
     top: 0;
     left: 50%;
-    transform-origin: bottom;
+    transform-origin: bottom center; /* Align the ticks to rotate around the bottom center */
     opacity: 0.3; /* Default dim light */
     transition: opacity 0.3s; /* Smooth transition */
 }
