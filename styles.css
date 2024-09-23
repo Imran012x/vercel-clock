@@ -76,8 +76,18 @@ h1 {
 
 .tick {
     position: absolute;
-    background: #fff;
     width: 2px;
+    height: 10px;
+    background: #fff;
+    top: 0;
+    left: 50%;
+    transform-origin: bottom;
+    opacity: 0.3; /* Default dim light */
+    transition: opacity 0.3s; /* Smooth transition */
+}
+
+.tick.active {
+    opacity: 1; /* Bright when active */
 }
 
 .digital-clock {
